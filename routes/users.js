@@ -66,7 +66,7 @@ app.delete('/users/:id', function(req, res) {
     MongoClient.connect(url, function(err, db) {
 
         var collection = db.collection('users');
-        collection.remove({ _id: req.body.id }, function(err) {
+        collection.remove({ _id: req.params.id }, function(err) {
             if(err){
                 res.send({ 'msg': 'err' })
             }
