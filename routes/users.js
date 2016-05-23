@@ -69,6 +69,10 @@ app.delete('/users', function(req, res) {
 
         collection.remove(req.body, function(err, data) {
 
+            if(err){
+                res.send({ 'msg': 'err' })
+            }
+
             res.send({ 'msg': 'user deleted' });
             db.close();
         });
