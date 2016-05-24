@@ -9,7 +9,7 @@ var url = 'mongodb://localhost:27017/store';*/
 var url = 'mongodb://nodeclass:1234567@ds023418.mlab.com:23418/nirsdb';
 
 // route to handle all users
-app.get('/users', function(req, res) {
+app.get('/users/GetAll', function(req, res) {
 
     MongoClient.connect(url, function(err, db) {
 
