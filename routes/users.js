@@ -61,22 +61,6 @@ app.get('/users/:id', function(req, res) {
 
 // Route that handles creation of new user
 
-/*app.delete('/users/:id', function(req, res) {
-
-    MongoClient.connect(url, function(err, db) {
-
-        var collection = db.collection('users');
-        collection.remove({ _id: req.params.id }, function(err) {
-            if(err){
-                res.send({ 'msg': 'err' })
-            }
-
-            res.send({ 'msg': 'user deleted' });
-            db.close();
-
-        });
-    });
-});*/
 
 app.delete('/users/:id', function(req, res) {
 
@@ -102,25 +86,7 @@ app.delete('/users/:id', function(req, res) {
 
 
 
-/*app.delete('/users/:id', function(req, res) {
-
-    MongoClient.connect(url, function(err, db) {
-
-        var collection = db.collection('users');
-
-        collection.remove(req.body, function(err, data) {
-
-            if(err){
-                res.send({ 'msg': 'err' })
-            }
-
-            res.send({ 'msg': 'user deleted' });
-            db.close();
-        });
-    });
-});*/
-
-// Route that handles creation of new user
+// Route that handles delete of  user
 
 app.post('/users', function(req, res) {
     MongoClient.connect(url, function(err, db) {
