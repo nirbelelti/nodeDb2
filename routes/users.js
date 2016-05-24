@@ -5,6 +5,7 @@ var ObjectId = require('mongodb').ObjectID;
 
 
 
+
 var url = 'mongodb://nodeclass:1234567@ds023418.mlab.com:23418/nirsdb';
 
 // route to handle all users
