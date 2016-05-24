@@ -78,7 +78,7 @@ app.get('/users/:id', function(req, res) {
     });
 });*/
 
-app.delete('/users', function(req, res) {
+app.delete('/users/:id', function(req, res) {
 
     MongoClient.connect(url, function(err, db) {
 
@@ -91,7 +91,7 @@ app.delete('/users', function(req, res) {
 
             var collection = db.collection('users');
 
-            collection.remove(req.body, function (err, data) {
+            collection.removeOne(req.body, function (err, data) {
 
                 res.send({'msg': 'user deleted'});
                 db.close();
