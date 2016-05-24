@@ -3,8 +3,7 @@ var app = express();
 var MongoClient = require('mongodb').MongoClient;
 var ObjectId = require('mongodb').ObjectID;
 
-/*
-var url = 'mongodb://localhost:27017/store';*/
+
 
 var url = 'mongodb://nodeclass:1234567@ds023418.mlab.com:23418/nirsdb';
 
