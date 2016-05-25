@@ -4,6 +4,10 @@ var BodyParser = require('body-parser'); // middle
 var cors = require('cors');
 var users = require('./routes/users.js');
 
+var corsOptions ={
+    origin: 'https://git.heroku.com/nodedb.git'
+}
+
 
 
 
