@@ -5,7 +5,7 @@ var ObjectId = require('mongodb').ObjectID;
 var cors = require('cors');
 
 
-app.use('cors');
+
 
 
 
