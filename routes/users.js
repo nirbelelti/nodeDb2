@@ -5,6 +5,9 @@ var ObjectId = require('mongodb').ObjectID;
 var cors = require('cors');
 
 
+app.use('cors');
+
+
 
 
 
@@ -120,6 +123,7 @@ app.put('/users/:id',cors(), function(req, res) {
         });
     });
 });
+
 
 module.exports = app;
 
