@@ -91,7 +91,7 @@ app.delete('/users/:id',cors(), function(req, res) {
 
 // Route that handles delete of  user
 
-app.post('/users/Create', function(req, res) {
+app.post('/users/Create/', function(req, res) {
     MongoClient.connect(url, function(err, db) {
 
         var collection = db.collection('users');
