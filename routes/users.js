@@ -3,6 +3,10 @@ var app = express();
 var MongoClient = require('mongodb').MongoClient;
 var ObjectId = require('mongodb').ObjectID;
 
+var ccorsOptions ={
+    origin: 'https://git.heroku.com/nodedb.git'
+}
+
 
 
 
