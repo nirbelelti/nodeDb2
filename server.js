@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var BodyParser = require('body-parser'); // middle
-
+var cors = require('cors');
 var users = require('./routes/users.js');
 
 
@@ -14,6 +14,8 @@ app.use(BodyParser.urlencoded({
 app.use(BodyParser.json());
 
 app.use(users);
+
+app.use(cors());
 
 app.use(function(req, res) {
     res.status(404);
