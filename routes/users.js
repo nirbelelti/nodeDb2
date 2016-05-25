@@ -91,7 +91,7 @@ app.delete('/users/:id',cors(), function(req, res) {
 
 // Route that handles delete of  user
 
-app.post('/users/Create/',cors(), function(req, res) {
+app.post('/users/Create',cors(), function(req, res) {
     MongoClient.connect(url, function(err, db) {
 
         var collection = db.collection('users');
@@ -106,7 +106,7 @@ app.post('/users/Create/',cors(), function(req, res) {
 
 // Route that handles updates of a user
 
-app.put('/users/:id', function(req, res) {
+app.put('/users/:id',cors(), function(req, res) {
     MongoClient.connect(url, function(err, db) {
 
         var collection = db.collection('users');
