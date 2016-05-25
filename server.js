@@ -4,9 +4,9 @@ var BodyParser = require('body-parser'); // middle
 var cors = require('cors');
 var users = require('./routes/users.js');
 
-var corsOptions ={
+/*var corsOptions ={
     origin: 'https://git.heroku.com/nodedb.git'
-}
+}*/
 
 
 
@@ -28,4 +28,6 @@ app.use(function(req, res) {
 
 
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3000,function(){
+    console.log('CORS-enabled web server listening on port 80');
+});;

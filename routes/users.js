@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var MongoClient = require('mongodb').MongoClient;
 var ObjectId = require('mongodb').ObjectID;
+var cors = require('cors');
 
 
 
@@ -11,7 +12,7 @@ var ObjectId = require('mongodb').ObjectID;
 var url = 'mongodb://nodeclass:1234567@ds023418.mlab.com:23418/nirsdb';
 
 // route to handle all users
-app.get('/users/GetAll', cors(corsOptions),function(req, res) {
+app.get('/users/GetAll', cors(),function(req, res) {
 
     MongoClient.connect(url, function(err, db) {
 
@@ -27,7 +28,7 @@ app.get('/users/GetAll', cors(corsOptions),function(req, res) {
 
 
 // Rote to handle single user
-app.get('/users/:id', function(req, res) {
+app.get('/users/:id',cors(), function(req, res) {
 
     if (req.params.id.length === 12 || req.params.id.length === 24) {
         MongoClient.connect(url, function(err, db) {
@@ -64,7 +65,7 @@ app.get('/users/:id', function(req, res) {
 // Route that handles creation of new user
 
 
-app.delete('/users/:id', function(req, res) {
+app.delete('/users/:id',cors(), function(req, res) {
 
     MongoClient.connect(url, function(err, db) {
 
