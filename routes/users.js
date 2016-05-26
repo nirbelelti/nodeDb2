@@ -68,7 +68,7 @@ app.get('/users/:id',cors(), function(req, res) {
 // Route that handles creation of new user
 
 
-app.delete('/users/:id',cors(), function(req, res) {
+app.delete('/users/Delete/:id',cors(), function(req, res) {
 
     MongoClient.connect(url, function(err, db) {
 
@@ -115,6 +115,7 @@ app.put('/users/:id',cors(), function(req, res) {
         var collection = db.collection('users');
 
         collection.update({ '_id': ObjectId(req.params.id) }, {
+           /* "name":req.body.name*/
             $set: req.body
         }, function(err, data) {
 
