@@ -109,14 +109,15 @@ app.post('/users/Create',cors(), function(req, res) {
 
 // Route that handles updates of a user
 
-app.put('/users/:id',cors(), function(req, res) {
+app.put('/users/Update/:id',cors(), function(req, res) {
     MongoClient.connect(url, function(err, db) {
 
         var collection = db.collection('users');
 
         collection.update({ '_id': ObjectId(req.params.id) }, {
-           /* "name":req.body.name*/
-            $set: req.body
+            'initials':req.body.initials,
+            'birthdate':req.body.birthdate
+
         }, function(err, data) {
 
             res.send({ 'msg': 'user updated' });
