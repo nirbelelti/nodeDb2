@@ -17,9 +17,11 @@ app.use(BodyParser.urlencoded({
 }));
 app.use(BodyParser.json());
 
+app.use(cors());
+
 app.use(users);
 
-app.use(cors());
+
 
 app.use(function(req, res) {
     res.status(404);
