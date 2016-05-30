@@ -1,13 +1,13 @@
 {
-  "name": "mongodb_express",
+  "name": "NodeDb",
   "version": "0.0.1",
-  "description": "basic mongodb, express, and json api",
+  "description": "Node mandatory assignment for the 4th semester",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "clbo",
+  "author": "nir liviu",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.0",
