@@ -115,8 +115,15 @@ app.put('/users/Update/:id',cors(), function(req, res) {
         var collection = db.collection('users');
 
         collection.update({ '_id': ObjectId(req.params.id) }, {
-            'initials':req.body.initials,
-            'birthdate':req.body.birthdate
+            'firstname':req.body.firstname,
+            'lastname':req.body.lastname,
+            'birthdate':req.body.birthdate,
+            'email':req.body.email,
+            'genderSelect':req.body.genderSelect,
+            'interestedIn':req.body.interestedIn,
+            'occupation':req.body.occupation,
+            'hobby':req.body.hobby
+
 
         }, function(err, data) {
 
